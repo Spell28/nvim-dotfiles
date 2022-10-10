@@ -8,15 +8,12 @@ end
 local b = null_ls.builtins
 
 local sources = {
-
   -- webdev stuff
   b.diagnostics.eslint_d,
   b.code_actions.eslint_d,
   b.formatting.prettierd,
-
   -- Lua
   b.formatting.stylua,
-
   -- Shell
   b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 }
@@ -31,8 +28,7 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-          vim.lsp.buf.formatting_sync()
+          vim.lsp.buf.format { bufnr = bufnr }
         end,
       })
     end

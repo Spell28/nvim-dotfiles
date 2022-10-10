@@ -21,7 +21,7 @@ saga.init_lsp_saga {
   -- { bufnr, code, col, end_col, end_lnum, lnum, message, severity, source }
   diagnostic_header = { "😡", "😥", "😤", "😐" },
   -- preview lines of lsp_finder and definition preview
-  max_preview_lines = 10,
+  max_preview_lines = 20,
   -- use emoji lightbulb in default
   code_action_icon = "💡",
   -- if true can press number to execute the codeaction in codeaction window
