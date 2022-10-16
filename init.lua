@@ -39,5 +39,3 @@ vim.opt.spelllang = "en"
 vim.opt.spelllang = { "en_us", "ru" }
 vim.opt.errorbells = false
 vim.opt.list = true
-vim.opt.listchars:append "space:⋅"
-vim.opt.signcolumn = "yes"
