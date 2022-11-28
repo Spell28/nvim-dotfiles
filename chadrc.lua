@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-  theme = "decay",
+  theme = "gruvchad",
   hl_override = {
     AlphaHeader = {
       fg = "red",
