@@ -25,6 +25,14 @@ local logo = {
 M.ui = {
   statusline = {
     separator_style = "block",
+    overriden_modules = nil,
+  },
+
+  -- lazyload it when there are 1+ buffers
+  tabufline = {
+    enabled = true,
+    lazyload = true,
+    overriden_modules = nil,
   },
 }
 
@@ -62,7 +70,14 @@ end
 M.nvimtree = {
   filters = {
     dotfiles = false,
-    exclude = { vim.fn.stdpath "config" },
+    exclude = {},
+    custom = {
+      ".git$",
+      ".github$",
+      ".idea$",
+      ".vscode$",
+      ".DS_Store$",
+    },
   },
   open_on_setup = true,
   view = {
@@ -78,7 +93,34 @@ M.nvimtree = {
     highlight_git = true,
     icons = {
       show = {
-        git = true,
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = false,
+      },
+
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          default = "",
+          empty = "",
+          empty_open = "",
+          open = "",
+          symlink = "",
+          symlink_open = "",
+          arrow_open = "",
+          arrow_closed = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
       },
     },
     highlight_opened_files = "all",
