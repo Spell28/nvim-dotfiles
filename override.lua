@@ -85,6 +85,12 @@ M.nvimtree = {
     side = "left",
     width = 30,
     hide_root_folder = true,
+    mappings = {
+      custom_only = false,
+      list = {
+        -- user mappings go here
+      },
+    },
   },
   git = {
     enable = true,
@@ -178,6 +184,7 @@ M.mason = {
     "lua-language-server",
     "stylua",
     -- web dev
+    "stylelint-lsp",
     "css-lsp",
     "cssmodules-language-server",
     "html-lsp",
@@ -187,10 +194,13 @@ M.mason = {
     "emmet-ls",
     "json-lsp",
     "prettier",
+    "prettierd",
     -- docker
     "dockerfile-language-server",
     -- other
     "codespell",
+
+
   },
 }
 

@@ -21,6 +21,28 @@ Use [packer](https://github.com/wbthomason/packer.nvim) to install required plug
 
 Check [null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md) to get config for ["eslint_d", "stylua", "prettierd", "shellcheck"] languages!
 
+for **styled-components**:
+  1: install dependency to local npm
+
+```bash
+yarn add --dev stylelint stylelint-processor-styled-components stylelint-config-styled-components stylelint-config-recommended
+```
+
+  2: create .stylelintrc at the root of project
+```json
+{
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ]
+}
+
+
+```
+
 ## Usage
 
 ```

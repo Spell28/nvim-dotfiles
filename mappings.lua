@@ -10,8 +10,9 @@ M.misc = {
     -- LSP Saga
     ["<leader>fd"] = { "<cmd>Lspsaga lsp_finder<CR>", "Find Defenitions" },
     ["<leader>k"] = { "<cmd>Lspsaga hover_doc<CR>", "Show Hover Doc" },
-    ["<leader>ca"] = { "<cmd>Lspsaga code_action<CR>", "Show Code Actions" },
+    ["<leader>a"] = { "<cmd>Lspsaga code_action<CR>", "Show Code Actions" },
     ["<leader>ld"] = { "<cmd>Lspsaga show_line_diagnostics<CR>", "ShowLine diagnostic" },
+    -- REST Nvim
     ["<leader>rr"] = { "<Plug>RestNvim<CR>", "Run Request Under Cursor Via RestNvim", opts = { noremap = false } },
   },
   v = {

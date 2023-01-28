@@ -9,7 +9,7 @@ return {
     disable = false,
     override_options = overrides.alpha,
   },
-  ["kyazdani42/nvim-tree.lua"] = {
+  ["nvim-tree/nvim-tree.lua"] = {
     override_options = overrides.nvimtree,
   },
   ["nvim-treesitter/nvim-treesitter"] = {
@@ -43,26 +43,11 @@ return {
   ["JoosepAlviste/nvim-ts-context-commentstring"] = {
     after = "nvim-treesitter",
   },
-  ["ggandor/leap.nvim"] = {
-    config = function()
-      require("leap").set_default_keymaps()
-    end,
-  },
   ["windwp/nvim-ts-autotag"] = {
     ft = { "html", "javascriptreact" },
     after = "nvim-treesitter",
     config = function()
       require("custom.plugins.smallconfigs").autotag()
-    end,
-  },
-  ["Pocco81/auto-save.nvim"] = {
-    config = function()
-      require("custom.plugins.smallconfigs").autosave()
-    end,
-  },
-  ["andreadev-it/shade.nvim"] = {
-    config = function()
-      require("custom.plugins.smallconfigs").shade()
     end,
   },
   ["rest-nvim/rest.nvim"] = {
@@ -76,10 +61,10 @@ return {
     end,
   },
   ["glepnir/lspsaga.nvim"] = {
-    after = "nvim-lspconfig",
     branch = "main",
     config = function()
-      require "custom.plugins.lspsaga"
+      require("lspsaga").setup {}
     end,
+    requires = { { "nvim-tree/nvim-web-devicons" } },
   },
 }
