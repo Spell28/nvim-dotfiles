@@ -20,22 +20,10 @@ M.misc = {
   },
 }
 
-M.nvterm = {
-  t = {
-    ["<A-t>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "toggle horizontal term",
-    },
-  },
+M.tabufline = {
   n = {
-    ["<A-t>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "toggle horizontal term",
-    },
+    ["<S-H>"] = { "<cmd> TbufLeft <CR>", "move buffer to the left" },
+    ["<S-L>"] = { "<cmd> TbufRight <CR>", "move buffer to the right" },
   },
 }
 
